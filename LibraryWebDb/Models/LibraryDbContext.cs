@@ -4,7 +4,7 @@ namespace LibraryWebDb.Models
 {
 	public class LibraryDbContext : DbContext
 	{
-        public LibraryDbContext(DbContextOptions dbContextOptions)
+        public LibraryDbContext(DbContextOptions options) : base(options)
         {
         }
 
