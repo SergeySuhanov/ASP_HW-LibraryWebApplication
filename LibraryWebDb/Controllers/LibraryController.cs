@@ -15,8 +15,8 @@ namespace LibraryWebDb.Controllers
 		[HttpGet]
 		public IActionResult Index()
 		{
-			//var books = libraryDbContext.Books;
-			return View();
+			var books = libraryDbContext.Books;
+			return View(books);
 		}
 
 		[HttpGet]
