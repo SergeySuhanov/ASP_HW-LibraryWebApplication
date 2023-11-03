@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VB3ZievZvPG7oOV/HHMcLuiILP9A7eJKs1l/CxzHlsU=",
+  "Hash": "+wPHuFycbxHhexsWrxvq3UZREOvd30oHiEEgSTru97c=",
   "Source": "LibraryWebDb",
   "BasePath": "_content/LibraryWebDb",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\swarm.jpg",
+      "SourceId": "LibraryWebDb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\",
+      "BasePath": "_content/LibraryWebDb",
+      "RelativePath": "uploads/swarm.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\swarm.jpg"
     }
   ]
 }

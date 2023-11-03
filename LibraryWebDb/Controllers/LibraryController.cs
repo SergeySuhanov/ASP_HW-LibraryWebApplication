@@ -1,4 +1,5 @@
-﻿using LibraryWebDb.Models;
+﻿using LibraryWebDb.Helpers;
+using LibraryWebDb.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryWebDb.Controllers
@@ -26,15 +27,20 @@ namespace LibraryWebDb.Controllers
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> Add(Book book)
+		[ValidateAntiForgeryToken]
+		public async Task<IActionResult> Add(Book book, IFormFile Image)
 		{
-			if (ModelState.IsValid)
-			{
+			//if (ModelState.IsValid)
+			//{
+
+			//Path.GetExtension(Image.FileName);
+
+			book.ImageUrl = await FileUploadHelper.UploadAsync(Image);
 				book.CreatedDate = DateTime.Now;
 				await libraryDbContext.Books.AddAsync(book);
 				await libraryDbContext.SaveChangesAsync();
 				return RedirectToAction("Index");
-			}
+			//}
 			return View(book);
 		}
 	}

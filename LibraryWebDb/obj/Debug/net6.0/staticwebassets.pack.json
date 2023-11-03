@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\swarm.jpg",
+      "PackagePath": "staticwebassets\\uploads\\swarm.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.LibraryWebDb.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
