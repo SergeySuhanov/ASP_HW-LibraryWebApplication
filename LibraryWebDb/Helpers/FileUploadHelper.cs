@@ -10,7 +10,7 @@ namespace LibraryWebDb.Helpers
             if (formFile != null)
             {
                 var filename = $"{Guid.NewGuid()}{Path.GetExtension(formFile.FileName)}";
-                using var fs = new FileStream(@$"wwwroot/uploads/{formFile.FileName}", FileMode.Create);
+                using var fs = new FileStream(@$"wwwroot/uploads/{filename}", FileMode.Create);
                 await formFile.CopyToAsync(fs);
                 return $@"/uploads/{filename}";
             }

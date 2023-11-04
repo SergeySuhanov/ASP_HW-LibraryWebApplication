@@ -245,6 +245,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\23d7645a-c9dd-4676-8c49-e9a2d409732a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\23d7645a-c9dd-4676-8c49-e9a2d409732a.jpg"
+    },
+    {
+      "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\ferrari_360modena_1_2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ferrari_360modena_1_2.jpg"
+    },
+    {
       "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\swarm.jpg",
       "PackagePath": "staticwebassets\\uploads\\swarm.jpg"
     },

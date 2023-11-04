@@ -13,6 +13,8 @@ builder.Services.AddDbContext<LibraryDbContext>(option =>
 
 var app = builder.Build();
 
+LibraryDbInitializer.seed(app);
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

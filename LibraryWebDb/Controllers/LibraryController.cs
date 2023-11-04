@@ -1,5 +1,6 @@
 ﻿using LibraryWebDb.Helpers;
 using LibraryWebDb.Models;
+using LibraryWebDb.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryWebDb.Controllers
@@ -17,7 +18,11 @@ namespace LibraryWebDb.Controllers
 		public IActionResult Index()
 		{
 			var books = libraryDbContext.Books;
-			return View(books);
+			var categories = libraryDbContext.Categories;
+
+			var model = new IndexViewModel() { Books = books, Categories = categories };
+
+			return View(model);
 		}
 
 		[HttpGet]
@@ -29,7 +34,7 @@ namespace LibraryWebDb.Controllers
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Add(Book book, IFormFile Image)
-		{
+	 	{
 			//if (ModelState.IsValid)
 			//{
 

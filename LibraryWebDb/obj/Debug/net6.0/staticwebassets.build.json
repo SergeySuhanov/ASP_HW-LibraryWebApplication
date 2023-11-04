@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+wPHuFycbxHhexsWrxvq3UZREOvd30oHiEEgSTru97c=",
+  "Hash": "OH61QQru6mqtLtHBR2ACbBHVCn9sY1cfcaQa4ZUcjw4=",
   "Source": "LibraryWebDb",
   "BasePath": "_content/LibraryWebDb",
   "Mode": "Default",
@@ -1069,6 +1069,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\23d7645a-c9dd-4676-8c49-e9a2d409732a.jpg",
+      "SourceId": "LibraryWebDb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\",
+      "BasePath": "_content/LibraryWebDb",
+      "RelativePath": "uploads/23d7645a-c9dd-4676-8c49-e9a2d409732a.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\23d7645a-c9dd-4676-8c49-e9a2d409732a.jpg"
+    },
+    {
+      "Identity": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\ferrari_360modena_1_2.jpg",
+      "SourceId": "LibraryWebDb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\",
+      "BasePath": "_content/LibraryWebDb",
+      "RelativePath": "uploads/ferrari_360modena_1_2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ferrari_360modena_1_2.jpg"
     },
     {
       "Identity": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\swarm.jpg",
