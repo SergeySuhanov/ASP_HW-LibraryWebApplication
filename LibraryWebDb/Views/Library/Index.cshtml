@@ -8,15 +8,13 @@
     <h3>Категории</h3>
     <hr/>
     <div class="list-group">
-
-
-        @* Stopped video here at 1:03:11 *@
-
-
-        <a href="#" class="list-group-item list-group-item-action">A second link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A third link item</a>
-        <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-        <a class="list-group-item list-group-item-action disabled">A disabled link item</a>
+        @if (Model.Categories != null)
+        {
+            foreach (var item in Model.Categories)
+            {
+                <a href="#" class="list-group-item list-group-item-action">@item.Name</a>
+            }
+        }
     </div>
 </div>
 <div class="col-10">
@@ -31,6 +29,7 @@
                         <h5 class="card-title">@item.Title</h5>
                         <p class="card-text">@item.Author</p>
                         <p class="card-text">@Html.Raw(@item.Description)</p>
+                        <span>@item.Category.Name</span><br/>
                         <span>@item.CreatedDate</span>
                         @* <a href="#" class="btn btn-primary">Go somewhere</a> *@
                     </div>

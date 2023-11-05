@@ -2,6 +2,7 @@
 using LibraryWebDb.Models;
 using LibraryWebDb.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LibraryWebDb.Controllers
 {
@@ -28,6 +29,7 @@ namespace LibraryWebDb.Controllers
 		[HttpGet]
 		public IActionResult Add()
 		{
+			ViewBag.categories = new SelectList(libraryDbContext.Categories, "Id", "Name");
 			return View();
 		}
 

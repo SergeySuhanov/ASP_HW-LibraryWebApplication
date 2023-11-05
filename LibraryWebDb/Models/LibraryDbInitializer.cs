@@ -4,13 +4,15 @@
     {
         static public void seed(IApplicationBuilder app)
         {
-            var context = app.ApplicationServices.GetRequiredService<LibraryDbContext>();
+            var result = app.ApplicationServices.CreateScope();
+            var context = result.ServiceProvider.GetRequiredService<LibraryDbContext>();
 
             if (!context.Categories.Any()) 
             {
                 context.Categories.Add(new Category() { Name = "Роман" });
                 context.Categories.Add(new Category() { Name = "Учебная литература" });
                 context.Categories.Add(new Category() { Name = "Для детей" });
+                context.SaveChanges();
             }
 
             /*if (!context.Books.Any())

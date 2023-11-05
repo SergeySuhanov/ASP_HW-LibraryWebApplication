@@ -245,8 +245,20 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\20a2aa2e-aa46-4d9a-8cae-b036102f600f.webp",
+      "PackagePath": "staticwebassets\\uploads\\20a2aa2e-aa46-4d9a-8cae-b036102f600f.webp"
+    },
+    {
       "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\23d7645a-c9dd-4676-8c49-e9a2d409732a.jpg",
       "PackagePath": "staticwebassets\\uploads\\23d7645a-c9dd-4676-8c49-e9a2d409732a.jpg"
+    },
+    {
+      "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\b57ef89c-4d04-42e3-80db-5a07867b11ff.webp",
+      "PackagePath": "staticwebassets\\uploads\\b57ef89c-4d04-42e3-80db-5a07867b11ff.webp"
+    },
+    {
+      "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\fdad80a4-fa2d-4fae-a930-b484f2d25cac.webp",
+      "PackagePath": "staticwebassets\\uploads\\fdad80a4-fa2d-4fae-a930-b484f2d25cac.webp"
     },
     {
       "Id": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\ferrari_360modena_1_2.jpg",
