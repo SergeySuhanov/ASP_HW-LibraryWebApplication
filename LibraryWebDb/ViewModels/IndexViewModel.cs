@@ -6,5 +6,6 @@ namespace LibraryWebDb.ViewModels
     {
         public IEnumerable<Book> Books { get; set; }
         public IEnumerable<Category> Categories { get; set; }
+        public IEnumerable<Genre> Genres { get; set; }
     }
 }

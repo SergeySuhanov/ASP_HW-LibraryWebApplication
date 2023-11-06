@@ -15,12 +15,13 @@
                 context.SaveChanges();
             }
 
-            /*if (!context.Books.Any())
+            if (!context.Genres.Any())
             {
-                context.Books.Add(new Book() { Title = "Роман" });
-                context.Books.Add(new Book() { Title = "Учебная литература" });
-                context.Books.Add(new Book() { Title = "Для детей" });
-            }*/
+                context.Genres.Add(new Genre() { Name = "Художественая" });
+                context.Genres.Add(new Genre() { Name = "Документальная" });
+                context.Genres.Add(new Genre() { Name = "Сказка" });
+                context.SaveChanges();
+            }
         }
     }
 }

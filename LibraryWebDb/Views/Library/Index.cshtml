@@ -5,17 +5,31 @@
 @model IndexViewModel
 
 <div class="col-2">
-    <h3>Категории</h3>
-    <hr/>
-    <div class="list-group">
-        @if (Model.Categories != null)
-        {
-            foreach (var item in Model.Categories)
+    <div class="row">
+        <h3>Категории</h3>
+        <hr />
+        <div class="list-group">
+            @if (Model.Categories != null)
             {
-                <a href="#" class="list-group-item list-group-item-action">@item.Name</a>
+                foreach (var item in Model.Categories)
+                {
+                    <a href="#" class="list-group-item list-group-item-action">@item.Name</a>
+                }
             }
-        }
+        </div>
+        <h3>Жанры</h3>
+        <hr />
+        <div class="list-group">
+            @if (Model.Genres != null)
+            {
+                foreach (var item in Model.Genres)
+                {
+                    <a href="#" class="list-group-item list-group-item-action">@item.Name</a>
+                }
+            }
+        </div>
     </div>
+    
 </div>
 <div class="col-10">
     @if (Model.Books != null && Model.Books.Count() > 0)

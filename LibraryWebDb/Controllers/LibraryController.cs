@@ -20,8 +20,9 @@ namespace LibraryWebDb.Controllers
 		{
 			var books = libraryDbContext.Books;
 			var categories = libraryDbContext.Categories;
+			var genres = libraryDbContext.Genres;
 
-			var model = new IndexViewModel() { Books = books, Categories = categories };
+			var model = new IndexViewModel() { Books = books, Categories = categories, Genres = genres };
 
 			return View(model);
 		}
@@ -30,6 +31,7 @@ namespace LibraryWebDb.Controllers
 		public IActionResult Add()
 		{
 			ViewBag.categories = new SelectList(libraryDbContext.Categories, "Id", "Name");
+			ViewBag.genres = new MultiSelectList(libraryDbContext.Genres, "Id", "Name");
 			return View();
 		}
 
