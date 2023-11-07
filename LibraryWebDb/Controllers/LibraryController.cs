@@ -3,6 +3,7 @@ using LibraryWebDb.Models;
 using LibraryWebDb.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryWebDb.Controllers
 {
@@ -37,20 +38,34 @@ namespace LibraryWebDb.Controllers
 
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Add(Book book, IFormFile Image)
+		public async Task<IActionResult> Add(Book book, IFormFile Image, int[] genres)
 	 	{
 			//if (ModelState.IsValid)
 			//{
-
-			//Path.GetExtension(Image.FileName);
-
 			book.ImageUrl = await FileUploadHelper.UploadAsync(Image);
-				book.CreatedDate = DateTime.Now;
-				await libraryDbContext.Books.AddAsync(book);
-				await libraryDbContext.SaveChangesAsync();
-				return RedirectToAction("Index");
+			book.CreatedDate = DateTime.Now;
+			await libraryDbContext.Books.AddAsync(book);
+			await libraryDbContext.SaveChangesAsync();
+
+			libraryDbContext.BookGenres.AddRange(genres.Select(g => new BookGenre() { BookId = book.Id, GenreId = g }));
+            await libraryDbContext.SaveChangesAsync();
+
+            return RedirectToAction("Index");
 			//}
 			return View(book);
+		}
+
+		[HttpGet]
+		public IActionResult Edit(int bookId)
+		{
+			var book = libraryDbContext.Books.Include(b => b.Category).Include(b => b.BookGenres).FirstOrDefault(b => b.Id == bookId);
+			return View(book);
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> Edit(Book book, IFormFile Image, int[] genres)
+		{
+			return RedirectToAction("Index");
 		}
 	}
 }

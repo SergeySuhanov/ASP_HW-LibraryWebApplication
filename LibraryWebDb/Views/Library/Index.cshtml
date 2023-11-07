@@ -45,7 +45,7 @@
                         <p class="card-text">@Html.Raw(@item.Description)</p>
                         <span>@item.Category.Name</span><br/>
                         <span>@item.CreatedDate</span>
-                        @* <a href="#" class="btn btn-primary">Go somewhere</a> *@
+                        <a asp-controller="Library" asp-action="Edit" asp-route-bookId="@item.Id" class="btn btn-primary">Edit</a>
                     </div>
                 </div>
             }
