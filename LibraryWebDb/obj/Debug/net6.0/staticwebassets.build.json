@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FGJLsNZiOALeJ5Pedk5ZJHOq+GiB8N7hPin3GFYdW4M=",
+  "Hash": "dcqeGIOn6cS5PrVcRvS8GZuzFRimcMsc8+2iysf5AXE=",
   "Source": "LibraryWebDb",
   "BasePath": "_content/LibraryWebDb",
   "Mode": "Default",
@@ -1256,6 +1256,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\4f371cef-75b9-47e6-bf96-2fc22ff6ffb0.jpg"
+    },
+    {
+      "Identity": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\9af976fc-5b1f-4a1c-814e-b3cd991e166b.jpg",
+      "SourceId": "LibraryWebDb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\",
+      "BasePath": "_content/LibraryWebDb",
+      "RelativePath": "uploads/9af976fc-5b1f-4a1c-814e-b3cd991e166b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\9af976fc-5b1f-4a1c-814e-b3cd991e166b.jpg"
     },
     {
       "Identity": "E:\\SourceRepos\\ASP_HW-LibraryWebApplication\\LibraryWebDb\\wwwroot\\uploads\\b57ef89c-4d04-42e3-80db-5a07867b11ff.webp",

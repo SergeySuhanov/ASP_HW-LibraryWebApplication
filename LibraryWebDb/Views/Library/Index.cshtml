@@ -41,11 +41,26 @@
                     <img src="@item.ImageUrl" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">@item.Title</h5>
+                        <hr/>
+						@if (item.BookGenres.Count() > 0)
+						{
+							@foreach (var bookGenre in item.BookGenres)
+							{
+								<span class="badge bg-primary rounded-pill">@bookGenre.Genre.Name</span>
+							}
+						}
+						else
+						{
+							<span class="badge bg-danger rounded-pill">Нету</span>
+						}
+                        <hr/>
+                        <strong>@item.Category.Name</strong><br/>
                         <p class="card-text">@item.Author</p>
                         <p class="card-text">@Html.Raw(@item.Description)</p>
-                        <span>@item.Category.Name</span><br/>
                         <span>@item.CreatedDate</span>
-                        <a asp-controller="Library" asp-action="Edit" asp-route-bookId="@item.Id" class="btn btn-primary">Edit</a>
+                        <br>
+                        <a asp-controller="Library" asp-action="Details" asp-route-bookId="@item.Id" class="btn btn-outline-success w-100">Подробнее</a>
+                        <a asp-controller="Library" asp-action="Edit" asp-route-bookId="@item.Id" class="btn btn-outline-secondary w-100">Редактировать</a>
                     </div>
                 </div>
             }
