@@ -70,7 +70,7 @@ namespace LibraryWebDb.Controllers
 
 			ViewBag.categories = new SelectList(libraryDbContext.Categories, "Id", "Name");
 
-			var selectedGenresIds = libraryDbContext.BookGenres.Where(bg => bg.BookId == bookId).Select(g => g.GenreId);
+			var selectedGenresIds = libraryDbContext.BookGenres.Where(bg => bg.BookId == bookId).Select(bg => bg.GenreId);
 			ViewBag.genres = new MultiSelectList(libraryDbContext.Genres, "Id", "Name", selectedGenresIds);
 			return View(book);
 		}
@@ -97,8 +97,6 @@ namespace LibraryWebDb.Controllers
 				gId => gId.GenreId
 				);
 			await libraryDbContext.SaveChangesAsync();
-
-			///----- Stopped here at 2:23:44
 
             return RedirectToAction("Index");
 		}

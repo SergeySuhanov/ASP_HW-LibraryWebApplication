@@ -266,3 +266,4 @@ E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\bin\Debug\net6.0\ru\Mic
 E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\obj\Debug\net6.0\LibraryWebDb.sourcelink.json

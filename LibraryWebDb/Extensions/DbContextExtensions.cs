@@ -6,7 +6,7 @@ namespace LibraryWebDb.Extensions
     {
         public static void UpdateManyToMany<T,KEY>(this LibraryDbContext libraryDbContext, IEnumerable<T>currentItems, IEnumerable<T> newItems, Func<T,KEY> getKey) where T : class
         {
-            if (currentItems == null)
+            if (currentItems != null)
             {
                 libraryDbContext.Set<T>().RemoveRange(currentItems.Except(newItems, getKey));
                 libraryDbContext.Set<T>().AddRange(newItems.Except(currentItems, getKey));
@@ -19,9 +19,9 @@ namespace LibraryWebDb.Extensions
 
         public static IEnumerable<T> Except<T,KEY>(this IEnumerable<T> items, IEnumerable<T> other, Func<T,KEY> getKeyFunc)
         {
-            return items.GroupJoin(items, getKeyFunc, getKeyFunc, (item, templateItems) => new { item, templateItems })
-                .SelectMany(t => t.templateItems.DefaultIfEmpty(), (t, tmp) => new { t, tmp })
-                .Where(t => ReferenceEquals(null, t.tmp) || t.tmp.Equals(default(T)))
+            return items.GroupJoin(other, getKeyFunc, getKeyFunc, (item, templateItems) => new { item, templateItems })  // Combine in one chain
+                .SelectMany(t => t.templateItems.DefaultIfEmpty(), (t, tmp) => new { t, tmp })                           // Just converting
+                .Where(t => (ReferenceEquals(null, t.tmp) || t.tmp.Equals(default(T))))                                    // Filtering
                 .Select(t => t.t.item);
         }
     }
