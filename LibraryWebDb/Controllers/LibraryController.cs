@@ -54,6 +54,24 @@ namespace LibraryWebDb.Controllers
 		}
 
 		[HttpGet]
+		public IActionResult Delete(int id)
+		{
+			var book = libraryDbContext.Books.Find(id);
+			return View(book);
+		}
+
+		[HttpPost]
+		[ActionName("Delete")]
+		public async Task<IActionResult> ConfirmDelete(int id)
+		{
+			var book = libraryDbContext.Books.Find(id);
+			libraryDbContext.Books.Remove(book);
+			await libraryDbContext.SaveChangesAsync();
+			TempData["status"] = "Книга удалена";
+            return RedirectToAction("Index");
+        }
+
+		[HttpGet]
 		public IActionResult Details(int bookId)
 		{
 			var book = libraryDbContext.Books

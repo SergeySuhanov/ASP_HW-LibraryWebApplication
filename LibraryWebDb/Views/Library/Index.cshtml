@@ -61,6 +61,7 @@
                         <br>
                         <a asp-controller="Library" asp-action="Details" asp-route-bookId="@item.Id" class="btn btn-outline-success w-100">Подробнее</a>
                         <a asp-controller="Library" asp-action="Edit" asp-route-bookId="@item.Id" class="btn btn-outline-secondary w-100">Редактировать</a>
+                        <a asp-controller="Library" asp-action="Delete" asp-route-bookId="@item.Id" class="btn btn-outline-danger w-100">Удалить</a>
                     </div>
                 </div>
             }

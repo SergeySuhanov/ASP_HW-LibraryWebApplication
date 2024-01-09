@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/SourceRepos/ASP_HW-LibraryWebApplication/LibraryWebDb/Views/Library/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/SourceRepos/ASP_HW-LibraryWebApplication/LibraryWebDb/Views/Library/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlicmFyeVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
