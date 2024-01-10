@@ -24,7 +24,13 @@ namespace LibraryWebDb.Controllers
 			var categories = libraryDbContext.Categories;
 			var genres = libraryDbContext.Genres;
 
-			var model = new IndexViewModel() { Books = books, Categories = categories, Genres = genres };
+			var model = new IndexViewModel()
+			{
+				Books = books,
+				Categories = categories,
+				Genres = genres,
+				//RecentBooks = stopped here at 1:12:00
+			};
 
 			return View(model);
 		}
@@ -72,23 +78,23 @@ namespace LibraryWebDb.Controllers
         }
 
 		[HttpGet]
-		public IActionResult Details(int bookId)
+		public IActionResult Details(int id)
 		{
 			var book = libraryDbContext.Books
 				.Include(b => b.BookGenres).ThenInclude(bg => bg.Genre)
 				.Include(b => b.Category)
-				.FirstOrDefault(b => b.Id == bookId);
+				.FirstOrDefault(b => b.Id == id);
 			return View(book);
 		}
 
 		[HttpGet]
-		public IActionResult Edit(int bookId)
+		public IActionResult Edit(int id)
 		{
-			var book = libraryDbContext.Books.Find(bookId);
+			var book = libraryDbContext.Books.Find(id);
 
 			ViewBag.categories = new SelectList(libraryDbContext.Categories, "Id", "Name");
 
-			var selectedGenresIds = libraryDbContext.BookGenres.Where(bg => bg.BookId == bookId).Select(bg => bg.GenreId);
+			var selectedGenresIds = libraryDbContext.BookGenres.Where(bg => bg.BookId == id).Select(bg => bg.GenreId);
 			ViewBag.genres = new MultiSelectList(libraryDbContext.Genres, "Id", "Name", selectedGenresIds);
 			return View(book);
 		}
