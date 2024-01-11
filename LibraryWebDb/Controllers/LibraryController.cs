@@ -18,18 +18,32 @@ namespace LibraryWebDb.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Index()
+		public IActionResult Index(int? categoryId, int? genreId, int page = 1)
 		{
-			var books = libraryDbContext.Books.Include(b => b.BookGenres).ThenInclude(bg => bg.Genre).Include(b => b.Category);
-			var categories = libraryDbContext.Categories;
-			var genres = libraryDbContext.Genres;
+			var books = libraryDbContext.Books.Include(b => b.BookGenres).ThenInclude(bg => bg.Genre).Include(b => b.Category).OrderByDescending(b=>b.Id);
 
-			var model = new IndexViewModel()
+			if (categoryId != null)
+			{
+				books = (IOrderedQueryable<Book>)books.Where(b=>b.CategoryId == categoryId);
+			}
+
+            if (genreId != null)
+            {
+				//var bookArray = libraryDbContext.BookGenres.Where(bg=>bg.GenreId == genreId).Select(bg => bg.BookId);
+				//books = (IOrderedQueryable<Book>)books.Where(b => bookArray.Contains(b.Id));
+				books = (IOrderedQueryable<Book>)books.Where(b => b.BookGenres.Any(bg => bg.GenreId == genreId));
+			}
+
+            var model = new IndexViewModel()
 			{
 				Books = books,
-				Categories = categories,
-				Genres = genres,
-				//RecentBooks = stopped here at 1:12:00
+				Categories = libraryDbContext.Categories,
+				Genres = libraryDbContext.Genres,
+				RecentBooks = libraryDbContext.Books.OrderByDescending(b => b.Id).Take(3),
+				CurrentPages = page,
+				TotalPages = 10,
+				SelectedCategoryId = categoryId,
+				SelectedGenreId = genreId
 			};
 
 			return View(model);
