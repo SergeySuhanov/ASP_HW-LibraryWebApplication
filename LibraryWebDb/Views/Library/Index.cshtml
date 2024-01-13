@@ -4,7 +4,10 @@
 
 @model IndexViewModel
 
+@await Component.InvokeAsync("Pagination")
+
 <div class="col-2">
+    <a asp-action="Index" asp-controller="Library" class="btn btn-outline-info">Сбросить</a>
     <div class="row">
         <h3>Категории</h3>
         <hr />
@@ -13,7 +16,7 @@
             {
                 foreach (var item in Model.Categories)
                 {
-                    <a asp-action="Index" asp-controller="Library" asp-route-categoryId="@item.Id"
+                    <a asp-action="Index" asp-controller="Library" asp-route-categoryId="@item.Id" asp-route-genreId="@Model.SelectedGenreId"
                     class="list-group-item list-group-item-action @(Model.SelectedCategoryId==item.Id ? "active" : ' ')">@item.Name</a>
                 }
             }
@@ -25,8 +28,8 @@
             {
                 foreach (var item in Model.Genres)
                 {
-                    <a asp-action="Index" asp-conroller="Library" asp-route-genreId="@item.Id"
-                       class="list-group-item list-group-item-action @(Model.SelectedGenreId==item.Id ? "active" : ' ')">@item.Name</a>
+                    <a asp-action="Index" asp-conroller="Library" asp-route-genreId="@item.Id" asp-route-categoryId="@Model.SelectedCategoryId"
+                    class="list-group-item list-group-item-action @(Model.SelectedGenreId==item.Id ? "active" : ' ')">@item.Name</a>
                 }
             }
         </div>
