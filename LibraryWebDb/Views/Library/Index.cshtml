@@ -4,7 +4,13 @@
 
 @model IndexViewModel
 
-@await Component.InvokeAsync("Pagination")
+@* @await Component.InvokeAsync("Pagination", new { currentPage = 1, totalPages = 1}) // alternative way*@ 
+<vc:pagination current-page="@Model.CurrentPages"
+			   total-pages="@Model.TotalPages"
+			   limit="@Model.LimitPage"
+			   genre-id="@Model.SelectedGenreId"
+			   category-id="@Model.SelectedCategoryId"
+			   action="Index" controller="Library"></vc:pagination>
 
 <div class="col-2">
     <a asp-action="Index" asp-controller="Library" class="btn btn-outline-info">Сбросить</a>

@@ -34,17 +34,21 @@ namespace LibraryWebDb.Controllers
 				books = (IOrderedQueryable<Book>)books.Where(b => b.BookGenres.Any(bg => bg.GenreId == genreId));
 			}
 
-            var model = new IndexViewModel()
-			{
-				Books = books,
-				Categories = libraryDbContext.Categories,
-				Genres = libraryDbContext.Genres,
-				RecentBooks = libraryDbContext.Books.OrderByDescending(b => b.Id).Take(3),
-				CurrentPages = page,
-				TotalPages = 10,
-				SelectedCategoryId = categoryId,
-				SelectedGenreId = genreId
-			};
+			var model = new IndexViewModel();
+
+			int totalP = (int)Math.Ceiling(books.Count() / (double)model.LimitPage);
+			books = (IOrderedQueryable<Book>)books.Skip((page-1)*model.LimitPage).Take(model.LimitPage);
+
+
+			model.Books = books;
+			model.Categories = libraryDbContext.Categories;
+			model.Genres = libraryDbContext.Genres;
+			model.RecentBooks = libraryDbContext.Books.OrderByDescending(b => b.Id).Take(model.LimitPage);
+			model.CurrentPages = page;
+			model.TotalPages = totalP;
+			model.SelectedCategoryId = categoryId;
+			model.SelectedGenreId = genreId;
+			
 
 			return View(model);
 		}

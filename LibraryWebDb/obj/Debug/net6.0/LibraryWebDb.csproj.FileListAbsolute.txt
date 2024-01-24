@@ -267,3 +267,4 @@ E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\bin\Debug\net6.0\tr\Mic
 E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\obj\Debug\net6.0\LibraryWebDb.sourcelink.json
+E:\SourceRepos\ASP_HW-LibraryWebApplication\LibraryWebDb\obj\Debug\net6.0\scopedcss\Areas\Admin\Views\Shared\_Layout.cshtml.rz.scp.css

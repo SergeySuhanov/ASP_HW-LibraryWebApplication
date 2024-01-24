@@ -12,6 +12,6 @@ namespace LibraryWebDb.ViewModels
         public int? SelectedCategoryId { get; set; }
         public int? SelectedGenreId { get; set; }
         public int TotalPages { get; set; }
-        public int LimitPage { get; set; }
+        public int LimitPage { get; set; } = 2;
     }
 }

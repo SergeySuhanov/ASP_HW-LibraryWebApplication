@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LibraryWebDb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dbe6624e876fc67d3ebbb6cd8566d69efc41f8e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f47f157c94d988957af93fe4ca95bba0507eb7ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("LibraryWebDb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LibraryWebDb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
